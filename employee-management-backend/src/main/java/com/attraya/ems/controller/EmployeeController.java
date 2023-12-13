@@ -28,4 +28,9 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeById);
     }
 
+    @GetMapping
+    public ResponseEntity<List<EmployeeDto>> getAllEmployees(){
+        return ResponseEntity.ok(employeeService.getAllEmployees());
+    }
+
 }
